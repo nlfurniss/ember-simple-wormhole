@@ -39,6 +39,9 @@ ember install ember-simple-wormhole
 </EmberSimpleWormhole>
 ```
 
+### Placement of destination elements
+The destination element must be in the DOM when the wormhole component is invoked, otherwise it will not be found. For use cases such as a modal that could be triggered on multiple routes, consider placing the destination element in the application template to ensure it will always be present. 
+
 ### Mutliple wormholes with the same destination element
 If multiple `EmberSimpleWormhole`s have the same destination element, content from each wormhole will be appended to the destination and will not override any existing markup.
 
