@@ -6,6 +6,8 @@ export default class IndexController extends Controller {
 
   @tracked showDemoElemWormhole = true;
 
+  initialName = 'Tomster';
+
   get demoElem() {
     return document.getElementById('destination-elem');
   }
