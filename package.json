@@ -5,7 +5,7 @@
   "keywords": [
     "ember-addon"
   ],
-  "repository": "",
+  "repository": "https://github.com/nlfurniss/ember-simple-wormhole",
   "license": "MIT",
   "author": "Nathaniel Furniss",
   "directories": {
