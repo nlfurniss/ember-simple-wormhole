@@ -1,0 +1,9 @@
+{{#if this.isBrowser}}
+  {{#if this.renderInPlace}}
+    {{yield}}
+  {{else}}
+    {{#in-element this.destinationElement insertBefore=null}}
+      {{~yield~}}
+    {{/in-element}}
+  {{/if}}
+{{/if}}

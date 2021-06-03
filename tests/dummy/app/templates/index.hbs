@@ -1,0 +1,29 @@
+{{page-title "ember-simple-wormhole demo"}}
+
+<h1 id="title">ember-simple-wormhole</h1>
+
+<h2>Destination (string)</h2>
+<div id="destination-string" class="destination-container"></div>
+
+<h2>Destination (element)</h2>
+<div id="destination-elem" class="destination-container"></div>
+
+<EmberSimpleWormhole @to="destination-string">
+  <p>This text is rendered in "destination-string"</p>
+</EmberSimpleWormhole>
+
+{{#if this.showDemoElemWormhole}}
+  <EmberSimpleWormhole @to={{this.demoElem}}>
+    <p>This text is rendered in "destination-elem"</p>
+  </EmberSimpleWormhole>
+{{/if}}
+<button {{on "click" this.toggleShowingWormhole}}>
+  {{if this.showDemoElemWormhole "Hide" "Show"}} wormhole
+</button>
+
+<EmberSimpleWormhole @to="destination-string" @renderInPlace={{this.renderInPlace}}>
+  <p>This text is rendered in {{if this.renderInPlace "place" "\"destination-string\""}}</p>
+  <button {{on "click" this.toggleRenderInPlace}}>
+    Toggle renderInPlace
+  </button>
+</EmberSimpleWormhole>

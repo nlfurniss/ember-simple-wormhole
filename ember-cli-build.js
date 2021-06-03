@@ -4,7 +4,10 @@ const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function (defaults) {
   let app = new EmberAddon(defaults, {
-    // Add options here
+    babel: {
+      exclude: ['transform-regenerator', 'transform-async-to-generator'],
+      plugins: ['@babel/plugin-proposal-nullish-coalescing-operator'],
+    },
   });
 
   /*
