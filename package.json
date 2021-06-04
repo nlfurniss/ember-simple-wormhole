@@ -1,6 +1,6 @@
 {
   "name": "ember-simple-wormhole",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Ember addon that wraps in-element",
   "keywords": [
     "ember-addon"
