@@ -1,3 +1,5 @@
+[![CI](https://github.com/nlfurniss/ember-simple-wormhole/actions/workflows/CI.yml/badge.svg?branch=master)](https://github.com/nlfurniss/ember-simple-wormhole/actions/workflows/CI.yml)
+
 # ember-simple-wormhole
 
 This addon provides a component that allows for rendering a block in a DOM element somewhere else on the page. It's inspired by [ember-wormhole](https://github.com/yapplabs/ember-wormhole), but written using Octane idioms and leveraging the Ember helper [in-element](https://github.com/emberjs/ember.js/blob/master/packages/%40ember/-internals/glimmer/lib/syntax/in-element.ts).
