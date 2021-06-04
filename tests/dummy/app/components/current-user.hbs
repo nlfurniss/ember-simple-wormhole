@@ -1,3 +1,4 @@
-<input type="text" value="{{@initialName}}" {{on "keyup" this.updateName}}>
+<label for="current-user-name">What is your name?</label>
+<input id="current-user-name" type="text" value="{{@initialName}}" {{on "keyup" this.updateName}}>
 
 <p>Hello, my name is {{this.name}}</p>
