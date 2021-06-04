@@ -20,7 +20,7 @@ jobs:
       - run: yarn install --frozen-lockfile --non-interactive
       - run: yarn lint
 
-  tests_linux:
+  tests:
     needs: lint
     name: "Tests: ubuntu (node@${{ matrix.node-version }})"
     runs-on: ubuntu-latest
@@ -36,24 +36,11 @@ jobs:
       - run: yarn install --frozen-lockfile --non-interactive
       - run: yarn test
 
-  tests_other:
-    needs: lint
-    name: "Tests: ${{ matrix.os }}"
-    runs-on: "${{ matrix.os }}-latest"
-
-    strategy:
-      matrix:
-        os: [macOS, windows]
-
-    steps:
-      - uses: actions/checkout@v2
-      - run: yarn install --frozen-lockfile --non-interactive
-      - run: yarn test
-
   try-scenarios:
-    name: "Compatibility"
+    name: Tests - ${{ matrix.ember-try-scenario }}
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    continue-on-error: ${{ matrix.allow-failure }}
     needs: tests
 
     strategy:
@@ -65,9 +52,14 @@ jobs:
           - ember-release
           - ember-beta
           - ember-canary
-          - node-tests
           # - embroider
           # - ember-classic
+        allow-failure: [false]
+        include:
+          - ember-try-scenario: ember-beta
+            allow-failure: true
+          - ember-try-scenario: ember-canary
+            allow-failure: true
     steps:
       - uses: actions/checkout@v2
         with:
