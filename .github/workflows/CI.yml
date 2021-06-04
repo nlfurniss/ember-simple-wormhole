@@ -34,7 +34,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: yarn install --frozen-lockfile --non-interactive
-      - run: yarn test
+      - run: yarn test:ember
 
   try-scenarios:
     name: Tests - ${{ matrix.ember-try-scenario }}
@@ -52,8 +52,6 @@ jobs:
           - ember-release
           - ember-beta
           - ember-canary
-          # - embroider
-          # - ember-classic
         allow-failure: [false]
         include:
           - ember-try-scenario: ember-beta
