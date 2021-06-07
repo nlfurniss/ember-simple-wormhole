@@ -58,9 +58,9 @@ jobs:
             allow-failure: true
           - ember-try-scenario: ember-canary
             allow-failure: true
-          - scenario: embroider-safe
+          - ember-try-scenario: embroider-safe
             allow-failure: true
-          - scenario: embroider-optimized
+          - ember-try-scenario: embroider-optimized
             allow-failure: true
     steps:
       - uses: actions/checkout@v2
