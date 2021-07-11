@@ -1,4 +1,5 @@
 [![CI](https://github.com/nlfurniss/ember-simple-wormhole/actions/workflows/CI.yml/badge.svg?branch=master)](https://github.com/nlfurniss/ember-simple-wormhole/actions/workflows/CI.yml)
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/nlfurniss/ember-simple-wormhole)
 
 # ember-simple-wormhole
 
