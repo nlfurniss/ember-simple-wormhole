@@ -22,7 +22,7 @@ jobs:
 
   tests:
     needs: lint
-    name: "Tests: ubuntu (node@${{ matrix.node-version }})"
+    name: "Tests: ubuntu (node@${{ matrix.node }})"
     runs-on: ubuntu-latest
     strategy:
       matrix:
