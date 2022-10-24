@@ -26,8 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        # Node 15 is currently broken, Node 12 is almost EOL, Node 16 isn't out
-        node: [14]
+        node: [16]
 
     steps:
       - uses: actions/checkout@v2
@@ -65,7 +64,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: 12.x
+          node-version: 16.x
       - name: install dependencies
         run: yarn install
       - name: test
